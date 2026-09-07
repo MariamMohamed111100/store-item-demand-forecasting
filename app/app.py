@@ -46,6 +46,8 @@ submission_df = pd.read_csv(
 
 REPO_ID = "Mariam1095/store-item-demand-models"
 
+HF_TOKEN = st.secrets.get("HF_TOKEN", None)
+
 MODEL_FILES = [
     "ensemble_config.pkl",
     "features.pkl",
@@ -73,6 +75,7 @@ for file_name in MODEL_FILES:
                 filename=file_name,
                 local_dir=ARTIFACTS_DIR,
                 local_dir_use_symlinks=False
+                token=HF_TOKEN
             )
 
 # ==========================================
