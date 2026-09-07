@@ -74,7 +74,7 @@ for file_name in MODEL_FILES:
                 repo_id=REPO_ID,
                 filename=file_name,
                 local_dir=ARTIFACTS_DIR,
-                local_dir_use_symlinks=False
+                local_dir_use_symlinks=False,
                 token=HF_TOKEN
             )
 
